@@ -1,0 +1,21 @@
+<!-- <% @posts.each do |post| %>
+    <div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>
+<% end %>
+
+can also be written as
+
+<% @posts.each do |post| %>
+    <div><%= link_to post.title, "/posts/#{post.id}" %></div>
+<% end %>
+
+which can also be written as
+
+<% @posts.each do |post|%>
+    <div><%= link_to post.title, post_path(post.id) %></div>
+    <%end%>
+
+which cna also be written as-->
+
+<% @posts.each do |post| %>
+    <div><%= link_to post.title, post_path(post) %></div>
+    <%end%>
